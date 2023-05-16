@@ -1,15 +1,15 @@
-type PropsType = {
+export type PropsType = {
     id: number
     name: string
-    age:number
-    isActive : boolean
+    age: number
+    isActive: boolean
     address: TypeAddress
     technologies: Array<TypeTechnologies>
 
 
 }
 type TypeAddress = {
-    streetTitle:string
+    streetTitle: string
     city: TypeCity
 
 }
@@ -21,11 +21,11 @@ type TypeCity = {
 
 
 type TypeTechnologies = {
-    id:number
-    title:string
+    id: number
+    title: string
 }
 
-const student: (PropsType) = {
+export const student: (PropsType) = {
     id: 1,
     name: "Anastasia",
     age: 36,
@@ -46,11 +46,11 @@ const student: (PropsType) = {
         },
         {
             id: 2,
-            title: "HTML"
+            title: "CSS"
         },
         {
             id: 3,
-            title: "HTML"
+            title: "React"
         },
 
     ]
@@ -58,3 +58,5 @@ const student: (PropsType) = {
 console.log(student.name)
 console.log(student.age)
 console.log(student.address.city.title)
+console.log(student.technologies [2].title)
+

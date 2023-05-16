@@ -1,5 +1,7 @@
 import React from 'react';
 import {PropsType, student} from "../02-object/02";
+import {CityType, GovernmentBuildingType, HouseType} from "../02-object/02_02";
+import {city} from "../02-object/02.test";
 //У нас есть функция, которрая сумирует два числа,
 // функция нужна чтоб делать одно и тоже действие с разными субьектами
 //Над кем эти действия производяться
@@ -39,9 +41,33 @@ export const    doesStudentLiveInCity=( s:PropsType, city:string)=>{
     return s.address.city.title === city;
 
 }
+export const addMoneyToBudget = (building: GovernmentBuildingType, budget: number)=>{
+ building.budget += budget
+
+}
+// export const demolishHousesOnTheStreet = (s:CityType, city:string)=>{
+//
+//
+// }
 
 
+export const repairHouse= (houseType: HouseType)=>{
+  houseType.repaired = true;
 
+}
+export const toFireStaff= (building: GovernmentBuildingType, staffCountFire: number)=>{
+  building.staffCount -= staffCountFire
+
+}
+export const toHireStaff= (building: GovernmentBuildingType, staffCountHire: number)=>{
+    building.staffCount += staffCountHire
+
+}
+export const createMessage= (props:CityType)=>{
+    //return props.title = "Hello" + city.title + " citizens. I want you be happy.All " + city.citizensNumber + " men" //склеили строку
+    return props.title = `Hello${city.title} citizens. I want you be happy.All ${city.citizensNumber} men` //склеили строку
+
+}
 
 
 

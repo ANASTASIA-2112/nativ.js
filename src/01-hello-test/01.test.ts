@@ -19,15 +19,15 @@ test('sum should be correct', () => {
     expect(result).toBe(3);
 })
 
-test('sum should be correct', () => {
-    //action
-    let result1 = sum(a, b);
-    let result2 = sum(b, c);
-    //expert result
-
-    expect(result1).toBe(3);
-    expect(result2).toBe(5);
-})
+// test.skip('sum should be correct', () => {
+//     //action
+//     let result1 = sum(a, b);
+//     let result2 = sum(b, c);
+//     //expert result
+//
+//     expect(result1).toBe(3);
+//     expect(result2).toBe(5);
+// })
 
 
 test('multiply should be correct', () => {

@@ -4,7 +4,7 @@ export let city: CityType;
 
 beforeEach(() => {
     city = {
-        title: "New York",
+        title: " New Yourk",
         houses: [
             {
                 buildedAt: 2012, repaired: false,
@@ -19,7 +19,7 @@ beforeEach(() => {
         ],
         governmentBuilding: [
             {
-                type: "HOSPITAL", budget: 2000000, staffCount: 200,
+                type: "HOSPITAL", budget: 200000, staffCount: 200,
                 address: {
                     street: {
                         title: "Central Str"
@@ -71,7 +71,7 @@ test("test city should contains  hospital and fire station ", () => {
     expect(city.governmentBuilding.length).toBe(2);
 
     expect(city.governmentBuilding[0].type).toBe("HOSPITAL");
-    expect(city.governmentBuilding[0].budget).toBe(2000000);
+    expect(city.governmentBuilding[0].budget).toBe(200000);
     expect(city.governmentBuilding[0].staffCount).toBe(200);
     expect(city.governmentBuilding[0].address.street.title).toBe("Central Str");
 

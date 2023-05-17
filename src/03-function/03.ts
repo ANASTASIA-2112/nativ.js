@@ -62,7 +62,7 @@ export const toHireStaff= (building: GovernmentBuildingType, staffCountHire: num
 }
 export const createMessage= (props:CityType)=>{
     //return props.title = "Hello" + city.title + " citizens. I want you be happy.All " + city.citizensNumber + " men" //склеили строку
-    return props.title = `Hello${city.title} citizens. I want you be happy.All ${city.citizensNumber} men` //склеили строку
+    return props.title = `Hello ${city.title} citizens. I want you be happy.All ${city.citizensNumber} men` //склеили строку
 
 }
 

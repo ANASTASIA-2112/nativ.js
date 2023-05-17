@@ -4,7 +4,7 @@ export let city: CityType;
 
 beforeEach(() => {
     city = {
-        title: " New Yourk",
+        title: "New York",
         houses: [
             {
                 buildedAt: 2012, repaired: false,

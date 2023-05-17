@@ -57,17 +57,6 @@ test("Budget should be changed for FIRE-STATION", () => {
     expect(city.governmentBuilding[1].budget).toBe(400000);
 })
 
-//01.дополните тип HouseType (добавте порядковый id от 1 и по возрастанию)
-
-// test.skip("Houses should be destroyed", () => {
-//     demolishHousesOnTheStreet(city,"Happy street");
-//
-//     expect(city.houses.length).toBe(1);
-//     //expect(city.houses[0]).id).toBe(1);
-//
-// });
-
-
 test("Houses should be repared",()=> {
     repairHouse(city.houses[1]);
 

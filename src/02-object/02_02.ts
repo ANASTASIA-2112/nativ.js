@@ -2,6 +2,7 @@ export type HouseType={
     buildedAt:number
     repaired:boolean
     address:AddressType
+    id?:number
 
 
 }
@@ -24,5 +25,6 @@ export type GovernmentBuildingType={
     budget:number
     staffCount:number
     address: AddressType
+
 
 }

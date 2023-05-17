@@ -45,10 +45,7 @@ export const addMoneyToBudget = (building: GovernmentBuildingType, budget: numbe
  building.budget += budget
 
 }
-// export const demolishHousesOnTheStreet = (s:CityType, city:string)=>{
-//
-//
-// }
+
 
 
 export const repairHouse= (houseType: HouseType)=>{

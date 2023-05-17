@@ -655,3 +655,30 @@ function countSquares(cuts) {
 console.log(countSquares(countSquares(5)));
 console.log(countSquares(countSquares(16)));
 console.log(countSquares(countSquares(23)));
+
+//число, и вы должны сделать его отрицательным.
+//
+// Примеры
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+// Примечания
+// Число уже может быть отрицательным, и в этом случае никаких изменений не требуется.
+// Ноль (0) не проверяется на наличие какого-либо определенного знака. Отрицательные нули не имеют математического смысла.
+
+function makeNegative(num) {
+    //return -Math.abs(num);//1способ
+    //return num < 0 ? num : -num;//2способ
+}
+console.log( makeNegative(makeNegative(42)));
+
+//Создайте функцию, которая будет возвращать оператор приветствия,
+// использующий входные данные; ваша программа должна вернуть,
+// "Hello, <name> how are you doing today?".
+
+function  greet(name)  {
+    return  `Hello, ${name} how are you doing today?`
+}
+console.log(greet("Ryan"));
+console.log(greet("Shingles"));

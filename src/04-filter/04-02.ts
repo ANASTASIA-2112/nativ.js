@@ -9,3 +9,4 @@ export function getBuildingsWithStaffCountGreaterThen(buildings: Array<Governmen
     return buildings.filter(b => b.staffCount > number)//чистая функция
 
 }
+

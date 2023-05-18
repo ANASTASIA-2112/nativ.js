@@ -5,7 +5,6 @@ import {addMoneyToBudget, createMessage, repairHouse, toFireStaff, toHireStaff} 
 let city: CityType;
 
 
-
 beforeEach(() => {
     city = {
         title: "New York",
@@ -57,29 +56,29 @@ test("Budget should be changed for FIRE-STATION", () => {
     expect(city.governmentBuilding[1].budget).toBe(400000);
 })
 
-test("Houses should be repared",()=> {
+test("Houses should be repared", () => {
     repairHouse(city.houses[1]);
 
     expect(city.houses[1].repaired).toBeTruthy();
 })
 
 //штат сотрудников должен быть увеличен
-test("staff should be increased",()=> {
-   toFireStaff(city.governmentBuilding[0],20);
+test("staff should be increased", () => {
+    toFireStaff(city.governmentBuilding[0], 20);
 
     expect(city.governmentBuilding[0].staffCount).toBe(180);
 })
 
 //Дом должен быть отремонтирован
-test("House should be repared",()=> {
-   toHireStaff(city.governmentBuilding[0],20);
-   toHireStaff(city.governmentBuilding[1],100);
+test("House should be repared", () => {
+    toHireStaff(city.governmentBuilding[0], 20);
+    toHireStaff(city.governmentBuilding[1], 100);
 
     expect(city.governmentBuilding[0].staffCount).toBe(220);
     expect(city.governmentBuilding[1].staffCount).toBe(1100);
 })
-test("Greeting message should be correct for city",()=> {
-   //const message = createMessage(city);
+test("Greeting message should be correct for city", () => {
+    //const message = createMessage(city);
 
     expect(createMessage(city)).toBe("Hello New York citizens. I want you be happy.All 1000000 men");
 })

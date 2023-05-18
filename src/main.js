@@ -671,17 +671,19 @@ function makeNegative(num) {
     //return -Math.abs(num);//1способ
     //return num < 0 ? num : -num;//2способ
 }
-console.log( makeNegative(makeNegative(42)));
+
+console.log(makeNegative(makeNegative(42)));
 
 //Создайте функцию, которая будет возвращать оператор приветствия,
 // использующий входные данные; ваша программа должна вернуть,
 // "Hello, <name> how are you doing today?".
 
-function  greet(name)  {
-    return  `Hello, ${name} how are you doing today?`
+function greetlovefunc(name) {
+    return `Hello, ${name} how are you doing today?`
 }
-console.log(greet("Ryan"));
-console.log(greet("Shingles"));
+
+console.log(greetlovefunc("Ryan"));
+console.log(greetlovefunc("Shingles"));
 
 // Атрибут defer сообщает браузеру, что он должен продолжать
 // обрабатывать страницу и загружать скрипт в фоновом режиме,
@@ -696,3 +698,47 @@ console.log(greet("Shingles"));
 // (если асинхронный скрипт завершит загрузку после того, как страница будет готова),
 // …так и после асинхронного скрипта (если он короткий или уже содержится в HTTP-кеше)
 // Остальные скрипты не ждут async, и скрипты casync не ждут другие скрипты.
+
+
+//Тимми и Сара думают, что они влюблены, но в районе,
+// где они живут, они узнают об этом, только сорвав по цветку каждый.
+// Если у одного из цветов четное количество лепестков, а у другого нечетное, это означает, что они влюблены.
+// Напишите функцию, которая будет принимать количество лепестков каждого
+// цветка и возвращать true, если они влюблены, и false, если нет.
+//1способ
+// function lovefunc(flower1, flower2){
+//     return  lovefunc = (flower1, flower2) => (flower1 + flower2) % 2 !== 0;
+// }
+
+function lovefunc(flower1, flower2) {
+    const num = flower1 + flower2
+    if (num % 2 == 0) {
+        return false;
+    } else {
+        return true;
+    }
+
+}
+
+console.log(lovefunc(lovefunc(1, 4)))
+console.log(lovefunc(lovefunc(2, 2)))
+console.log(lovefunc(lovefunc(0, 1)))
+console.log(lovefunc(lovefunc(0, 0)))
+
+// x % 2 == 0 - четное число
+// x % 2 == 1 - нечётное число
+// Аналогично проверяется чётность любого числа с любым (кроме 0):
+// x % y == 0 - x кратно y
+
+//Нам нужна функция, которая может преобразовывать число (integer) в строку.
+// Какие способы достижения этого вы знаете?
+//array.join(" привет "))
+//Примеры (ввод -> вывод):
+// 123  --> "123"
+// 999  --> "999"
+// -100 --> "-100"
+function numberToString(num) {
+    return num.toString();
+}
+
+console.log(numberToString(numberToString(67), '67'));

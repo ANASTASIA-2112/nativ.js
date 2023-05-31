@@ -1,6 +1,5 @@
 import {CityType} from "../02-object/02_02";
 import {demolishHousesOnTheStreet, getBuildingsWithStaffCountGreaterThen} from "./04-02";
-import {opposite} from "../main";
 
 
 export let city: CityType;

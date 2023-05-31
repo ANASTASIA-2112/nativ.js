@@ -32,3 +32,4 @@ it('should return 12525220.3325', () => {
 it('should return 5', () => {
     expect(opposite(-5)).toBe(5);
 });
+

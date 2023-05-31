@@ -742,3 +742,80 @@ function numberToString(num) {
 }
 
 console.log(numberToString(numberToString(67), '67'));
+
+//Напишите функцию для преобразования имени в инициалы.
+// Это ката состоит строго из двух слов с одним пробелом между ними.
+// Выходные данные должны состоять из двух заглавных букв с разделяющей их точкой.
+// Это должно выглядеть примерно так:
+// Sam Harris => S.H
+// patrick feeney => P.F
+//replace() Метод возвращает новую строку с одним, некоторыми или всеми совпадениями a,
+// pattern замененными на a replacement. pattern Может быть строкой или a RegExp,
+// а replacement может быть строкой или функцией, вызываемой для каждого соответствия.
+// Если pattern является строкой, будет заменено только первое вхождение.
+// Исходная строка остается неизменной.
+//Пример:
+// Ввод: "john doe"
+// Разделите их: ["john", "doe"]
+// Берем 1-й символ: "j" // 1-е слово
+// Сделать его заглавным: "J" // 1-е слово
+// Берем 1-й символ: "d" // 2-е слово
+// Сделать его заглавным: "D" // 2-е слово
+// Соедините их точкой: "J.D"
+// Вывод: "J.D"
+function abbrevName(name) {
+    return (
+        name.split(" ").map((n) => n[0].toUpperCase()).join(".")
+    );
+}
+
+console.log(abbrevName(abbrevName("Sam Harris")));//S.H
+console.log(abbrevName(abbrevName("Patrick Feenan")));
+console.log(abbrevName(abbrevName("Evan Cole")));
+console.log(abbrevName(abbrevName("P Favuzzi")));
+console.log(abbrevName(abbrevName("David Mendieta")));
+
+//Создайте функцию, которая проверяет, делится ли число n на два числа x И y.
+// Все входные данные являются положительными, ненулевыми числами.
+
+//Examples:
+//1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+//2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+//3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+//4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+function isDivisible(n, x, y) {
+    // if(n % x == 0 && n % y ==0) 1 способ
+    //     return true;
+    //     else
+    //  return false;
+
+    return (n % x === 0 && n % y === 0) ? true : false; // 2 способ
+}
+
+console.log(isDivisible(isDivisible(3, 3, 4, false)));
+console.log(isDivisible(isDivisible(12, 3, 4, true)));
+console.log(isDivisible(isDivisible(8, 3, 4, false)));
+console.log(isDivisible(isDivisible(48, 3, 4, true)));
+
+
+//Вы получаете массив чисел, возвращаете сумму всех положительных.
+// Пример [1,-4,7,12] => 1 + 7 + 12 = 20
+// Примечание: если нечего суммировать, сумма по умолчанию равна 0.
+
+function positiveSum(arr) {
+    let result = 0
+    for (i=0;i<arr.length;i++){
+        if(arr[i] > 0){
+            result += arr[i]
+        }
+    }
+    return result
+}
+//0
+console.log(positiveSum(positiveSum([1, 2, 3, 4, 5])));
+console.log(positiveSum(positiveSum([1, -2, 3, 4, 5])));
+console.log(positiveSum(positiveSum([])));
+console.log(positiveSum(positiveSum([-1, -2, -3, -4, -5])));
+console.log(positiveSum(positiveSum([-1, 2, 3, 4, -5])));
+
+

@@ -49,34 +49,34 @@ export const User = () => {
     const onAgeChanged = (event: ChangeEvent<HTMLInputElement>) => {
         console.log("age changed")
     }
-    // const search = (event: MouseEvent<HTMLButtonElement>) => {
-    //     alert(event.currentTarget.value);
-    // }
+        // const search = (event: MouseEvent<HTMLButtonElement>) => {
+        //     alert(event.currentTarget.value);
+        // }
 
 
-    //currentTarget это то, что ожидаем получить с которым произошло событие на которое мы подписались
-    //event.currentTarget.value -то значение, которое новое на которое изменилась значение почему наш обработчик был вызван
-    //обработчик фокус потерян
-    const focusLostHandler = () => {
-        console.log("focus lost")
-    }
-    //есть элементы в фокусе,которых мы можем оказаться
-    //фокус tabIndex={}
-    //textarea уходит сробатывает событие onBlur фокус потерян
-    return <div>
+        //currentTarget это то, что ожидаем получить с которым произошло событие на которое мы подписались
+        //event.currentTarget.value -то значение, которое новое на которое изменилась значение почему наш обработчик был вызван
+        //обработчик фокус потерян
+        const focusLostHandler = () => {
+            console.log("focus lost")
+        }
+        //есть элементы в фокусе,которых мы можем оказаться
+        //фокус tabIndex={}
+        //textarea уходит сробатывает событие onBlur фокус потерян
+        return <div>
         <textarea
             onChange={onNameChanged}
             onBlur={focusLostHandler}
         >Dimych
         </textarea>
 
-        <input onChange={onAgeChanged} type={"number"}/>
+            <input onChange={onAgeChanged} type={"number"}/>
 
-        <button name={"delete"} onClick={deleteUser}>x</button>
-        <button name={"save"} onClick={deleteUser}>x</button>
-        {/*<button name={"delete"} onClick={search}>search</button>*/}
-    </div>
-}
+            <button name={"delete"} onClick={deleteUser}>x</button>
+            <button name={"save"} onClick={deleteUser}>x</button>
+            {/*<button name={"delete"} onClick={search}>search</button>*/}
+        </div>
+    }
 //однонго разработчика отдадим двум разным кнопкам
 //ты кнопка вызови нашу функцию deleteUser,когда по тебе кликнут
 //будет вызвана по одной из причин

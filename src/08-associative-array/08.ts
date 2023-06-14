@@ -12,7 +12,7 @@
 //         }
 //     }
 // }
-//
+
 // console.log(User.address.city.title)//"Minsk"
 // console.log(User["address"]["city"]["title"])//"Minsk" обязательно строка
 
@@ -22,6 +22,7 @@
 //ДОСТАЕМ ОБЬЕКТ С АЙДИШНИКОМ 10
 //он сразу дает по адресу
 //users[10]
+
 
 export const userArray = [
     {id: '10', name: 'Cristian'},
@@ -35,19 +36,21 @@ export const userArray = [
 ]
 //ДОСТАЕМ ОБЬЕКТ С АЙДИШНИКОМ 10
 //методом пробигания сравния обьект
-userArray.find(user => user.id === '10')
+userArray.find(user=> user.id === '10')
 userArray.filter(user => user.id === '10')
 //сложность достования элементов O(n).Чем больше количество элементов в массиве тем
 //сложнее достовать в ассоциативном массиве быстро сдесь долго
 
 
+
+
 //в обычный массив добавить, что-то
 //добовление/поиск/удаление максимально быстро
-let user = {id: '100', name: 'new user'}
-users[user.id] = user;
-//если обычное  добовление(мутабельное).Разришаеться мутировать обьект
-userArray.push(user)
-delete users[user.id]
+// let user = {id: '100', name: 'new user'};
+// user[user.id] = user;
+// //если обычное  добовление(мутабельное).Разришаеться мутировать обьект
+// userArray.push(user)
+// delete user[user.id]
 
 
 //если имутабельное добовление
